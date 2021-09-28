@@ -1,0 +1,63 @@
+@import '../base/variables';
+@import '../mixin';
+@import '../base/media';
+
+.expection{
+  margin: $section-margin;
+  .in-expection{
+    @include flex(space-between, center, column);
+    &>div{
+      margin: 20px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .happy-client{
+    height: 350px;
+    position: relative;
+    img{
+      width: 85% !important;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto;
+    }
+    &::before{
+      content: '23+ Awards';
+      top: 30px;
+      left: -25px;
+      padding: 10px 0px 10px 40px;
+      background: url('../../images/reward.svg') left center, $white;
+    }
+    &::after{
+      content: '24/7 Support';
+      bottom: 10px;
+      right: 0px;
+      padding: 10px 0px 10px 50px;
+      background: url('../../images/customer-service.svg') left center, $white;
+    }
+    &::before,
+    &::after{
+      position: absolute;
+      width: 100px;
+      background-repeat: no-repeat;
+      background-size: 40px 40px;
+      border-radius: 5px;
+      box-shadow: 0  0 20px $black-0-08;
+    }
+  }
+  &-info{
+    text-align: center;
+    h2{
+      margin: 10px;
+      margin-top: 40px;
+    }
+  }
+
+  @include tablet{
+    .in-expection{
+      @include flex(space-between, center, row);
+    }
+  }
+
+}

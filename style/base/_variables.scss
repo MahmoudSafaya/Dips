@@ -1,0 +1,27 @@
+// main colors
+$white: #FFFFFF;
+$black: #000000;
+$btn-orange: #E3511E;
+$footer-color: #283344;
+// p & h colors
+$black-333: #333;
+$black-444: #444;
+$header-color: #101F42;
+$text-gray: #A2A2A2;
+// bg colors
+$triangle-bg: #EAEFF0;
+$box-bg: #EBEBED;
+$pink: #F3BBA9;
+$L-White: #c0c0c0;
+// shadows colors
+$black-0-08: rgba(0,0,0,0.08);
+// big margin for sections
+$section-margin: 100px 0px;
+// style of every section
+section h2{
+  color: $header-color;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 45px;
+  text-align: center;
+}

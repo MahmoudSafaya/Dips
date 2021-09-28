@@ -1,0 +1,43 @@
+@import '../base/variables';
+@import '../mixin';
+@import '../base/media';
+
+.recent-projects{
+  .three-grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    .box{
+      &-img{
+        height: 400px;
+      }
+      &-info{
+        min-height: 70px;
+        margin: 20px 0px;
+        p{
+          margin: 0px;
+        }
+        h3{
+          color: $header-color;
+        }
+      } 
+    }
+  }
+  @include tablet{
+    .three-grid{
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .box-img{
+      height: 300px !important;
+    }
+    h3{
+      font-size: 22px !important;
+    }
+  }
+  @include desktop{
+    .box-img{
+      height: 400px !important;
+    }
+  }
+}

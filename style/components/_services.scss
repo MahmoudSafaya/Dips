@@ -1,0 +1,48 @@
+@import '../base/variables';
+@import '../mixin';
+@import '../base/media';
+
+.services{
+  margin: $section-margin;
+  .six-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    .box{
+      width: 100%;
+      height: 400px;
+      @include tablet{
+        height: 300px;
+      }
+      @include desktop{
+        height: 400px;
+      }
+      &>div{
+        width: 100%;
+        height: 100%;
+      }
+      &-info{
+        position: relative;
+        .triangle{
+          background: $triangle-bg;
+          clip-path: polygon(0% 0%, 50% 60%, 100% 0%);
+        }
+        .info{
+          position: absolute;
+          top:0;left:0;
+          @include flex(center, center, column);
+          p{
+            text-align: center;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  @include tablet{
+    .six-grid{
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}

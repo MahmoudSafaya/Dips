@@ -1,0 +1,52 @@
+@import '../base/variables';
+@import '../mixin';
+@import '../base/media';
+
+footer{
+  background: $footer-color;
+  color: $white;
+  padding: 40px 0;
+  margin-top: 100px;
+
+  .four-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    @include tablet{
+      grid-template-columns: 1.3fr 1fr 1fr 1fr;
+      gap: 20px;
+    }
+
+    .box{
+      h1{
+        font-weight: 800;
+        margin-bottom: 30px;
+        &:nth-of-type(1){
+          font-weight: 600;
+        }
+      }
+      ul li{
+        display: block;
+        margin: 10px 0px;
+        cursor: pointer;
+        color: $L-White;
+        transition: all 0.3s linear;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+      .social-media{
+        li{
+          display: inline-block;
+          margin-right: 20px;
+          color: $white;
+          transition: all 0.3s linear;
+          &:hover{
+            text-decoration: none;
+            transform: translateY(-3px);
+          }
+        }
+      }
+    }
+  }
+}

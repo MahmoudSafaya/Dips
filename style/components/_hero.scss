@@ -1,0 +1,47 @@
+@import '../base/variables';
+@import '../base/media';
+
+.hero{
+  height: 100vh;
+  background: url('../../images/hero-bg.jpg') center center/cover;
+  &-content{
+    width: 90%;
+    margin: 40px auto;
+    text-align: center;
+    @include tablet{
+      width: 75%;
+      margin: 150px auto;
+      p{
+        font-size: 85px !important;
+      }
+      button{
+        font-size: 22px;
+      }
+    }
+    @include desktop{
+      width: 75%;
+      margin: 100px auto;
+      p{
+        font-size: 80px !important;
+      }
+    }
+    p{
+      font-size: 50px;
+      font-weight: 600;
+      color: $white;
+      line-height: 1.2;
+      margin-bottom: 30px;
+    }
+    button{
+      color: $white;
+      background: $btn-orange;
+      padding: 10px 25px;
+      box-shadow: 0 0 40px $black-0-08;
+      transition: all 0.3s linear;
+      &:hover{
+        background: none;
+        border: 2px solid $btn-orange
+      }
+    }
+  }
+}

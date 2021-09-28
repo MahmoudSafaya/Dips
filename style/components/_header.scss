@@ -1,0 +1,87 @@
+@import '../base/variables';
+@import '../mixin';
+@import '../base/media';
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+header{
+  padding: 20px 0px;
+  color: $white;
+  @include flex(space-between, center, row);
+  h1{
+    font-family: 'Architects Daughter', cursive;
+  }
+  nav{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    padding: 40px 20px;
+    background: $white;
+    display: none;
+    transition: all 0.3s linear;
+    ul li{
+      display: block;
+      color: $black-333;
+      margin: 20px 0;
+      cursor: pointer;
+      &:hover{
+        text-decoration: underline;
+      }
+      &.li-btn{
+        border: 1px solid $black-333;
+        padding: 10px 15px;
+        max-width: 120px;
+        @include tablet{
+          borde: 1px solid $white;
+          width: auto;
+        }
+      }
+    }
+    .close{
+      position: absolute;
+      top: 30px;
+      right: 20px;
+      i{
+        color: $black;
+      }
+    }
+  }
+  i{
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  @include tablet{
+    nav{
+      padding: 40px;
+      font-size: 22px;
+    }
+    .close{
+      top: 25px !important;
+      right: 50px !important;
+    }
+    .li-btn{
+      max-width: 155px !important;
+    }
+  }
+  @include desktop{
+    nav{
+      position: relative;
+      width: auto !important;
+      padding: 0px;
+      background: none;
+      display: block;
+      ul li{
+        display: inline-block;
+        margin: 0 30px;
+        color: $white;
+        &.li-btn{
+          margin-right: 0px;
+          border: 1px solid $white;
+        }
+      }
+    }
+    .close,
+    .bars{display: none;}
+  }
+}
