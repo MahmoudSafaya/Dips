@@ -198,7 +198,7 @@ section h2 {
 
 .hero {
   height: 100vh;
-  background: url("../../images/hero-bg.jpg") center center/cover;
+  background: url("./images/hero-bg.jpg") center center/cover;
 }
 
 .hero-content {
